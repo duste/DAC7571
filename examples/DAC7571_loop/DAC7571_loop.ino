@@ -9,12 +9,12 @@ void setup()
 //Loop through Voltage from 0 to Vdd and back to 0 stepping at .01V incurements
 void loop()
 {
-  for (int i = 0; i <= Vdd; i +=.01)
+  for (float f = 0.00; f <= Vdd; f +=.01)
   {
-    dac.writedac(i,Vdd);
+    dac.writedac(f,Vdd);
   }
-  for (int i = Vdd; i>= 0; i -= .01)
+  for (int f = Vdd; f>= 0.00; f -= .01)
   {
-    dac.writedac(i,Vdd);
+    dac.writedac(f,Vdd);
   }
 }
